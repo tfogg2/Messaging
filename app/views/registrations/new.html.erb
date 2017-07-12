@@ -1,0 +1,8 @@
+<h2 id="log-in-title">Sign up</h2>
+<%= form_for(User.new, url: signup_path) do |f| %>
+
+  <%=f.label :username%>
+  <span class="input-group-addon">@</span>
+    <%= f.text_field :username, class: "form-control"%>
+  <%= f.submit "sign up", class: "btn btn-primary" %>
+<% end %>

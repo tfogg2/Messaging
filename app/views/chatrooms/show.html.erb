@@ -1,0 +1,11 @@
+<h1><%= @chatroom.topic %></h1>
+
+<%- if @chatroom.messages.any? %>
+  <%= render partial: "messages/message", collection: @chatroom.messages %>
+  <div class="panel-body hidden" id="messages">
+  </div>
+<%- else %>
+
+<%- end %>
+
+<%= render partial: 'messages/message_form', locals: {message: @message, chatroom: @chatroom} %>

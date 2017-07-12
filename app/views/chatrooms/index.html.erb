@@ -1,0 +1,15 @@
+<h1>Chatrooms</h1>
+
+<%= render partial: 'chatroom_form', locals: {chatroom: @chatroom} %>
+
+<div id="chatroom-errors">
+
+</div>
+  <ul id="chatroom-index">
+<%- if @chatrooms.any? %>
+
+  <%= render @chatrooms %>
+  </ul>
+<%- else %>
+   <p> Be the first one to make a chatroom! </p>
+<%- end %>
